@@ -36,6 +36,6 @@ RUN yarn --production \
 
 COPY --from=builder /app/lib /app/lib
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["node_modules/.bin/pm2-runtime", "/app/lib/index.js"]
