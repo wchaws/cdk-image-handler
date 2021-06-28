@@ -14,6 +14,7 @@ export class ImageHandlerStack extends Stack {
       desiredCount: 2,
       taskImageOptions: {
         image: ecs.ContainerImage.fromAsset(path.join(__dirname, 'app')),
+        containerPort: 80,
       },
     });
 

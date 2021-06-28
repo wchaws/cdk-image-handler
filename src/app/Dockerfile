@@ -1,5 +1,8 @@
 FROM node:14-slim as builder
 
+RUN mkdir /app && \
+    chown node /app
+
 USER node
 
 WORKDIR /app
@@ -14,6 +17,9 @@ RUN yarn build
 
 
 FROM node:14-slim
+
+RUN mkdir /app && \
+    chown node /app
 
 USER node
 
